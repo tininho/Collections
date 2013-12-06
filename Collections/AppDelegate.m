@@ -31,7 +31,7 @@
     NSLog(@"Immutable array = %@", immutableArray);
     NSLog(@"Mutable array  = %@", mutableArray);
     
-    /* Working with Dictionary objects */
+    /* Working with  Mutable Dictionary objects */
     NSDictionary *personInformation = @{
                                         @"firstName" : @"Romina",
                                         @"lastName" : @"Fernandez",
@@ -43,9 +43,16 @@
     NSString *lastName = personInformation[@"lastName"];
     NSString *age = personInformation[@"age"];
     NSString *sex = personInformation[@"sex"];
-    
+
     NSLog(@"Full Name = %@ %@",firstName, lastName);
     NSLog(@"Age = %@ , Sex = %@",age, sex);
+    
+    /* Working with Immutable Dictionary objects */
+    NSMutableDictionary *mutablePersonInformation = [[NSMutableDictionary alloc] initWithDictionary:personInformation];
+    
+    mutablePersonInformation[@"age"]=@23;
+    
+    NSLog(@"New Person Information is %@",mutablePersonInformation);
     
     return YES;
 }
