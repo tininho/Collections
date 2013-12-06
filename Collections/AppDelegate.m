@@ -12,19 +12,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    /* immutable and mutable array */
-    NSArray *stringsArray = @[
-                              @"String 1",
-                              @"String 2",
-                              @"String 3"
+    /* Working with array objects */
+    NSString *string1 = @"String 1";
+    NSString *string2 = @"String 2";
+    NSString *string3 = @"String 3";
+    
+    NSArray *immutableArray = @[
+                              string1,
+                              string2,
+                              string3
                               ];
     
-    __unused NSString *firstString = stringsArray[0];
-    __unused NSString *secondString = stringsArray[1];
-    __unused NSString *thirdString = stringsArray[2];
+    NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithArray:immutableArray];
+    [mutableArray exchangeObjectAtIndex:0 withObjectAtIndex:1];
+    [mutableArray removeObjectAtIndex:1];
+    [mutableArray setObject:string1 atIndexedSubscript:0];
     
-    NSLog(@"Immutable array = %@", stringsArray);
-     
+    NSLog(@"Immutable array = %@", immutableArray);
+    NSLog(@"Mutable array  = %@", mutableArray);
+    
     return YES;
 }
 							
