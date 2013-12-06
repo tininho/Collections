@@ -65,6 +65,15 @@
     
     NSLog(@"Shopping list =  %@",shoppingList);
     
+    /* Working with mutable Set Objects */
+    
+    NSMutableSet *mutableShoppingList = [[NSMutableSet alloc] initWithSet:shoppingList];
+    
+    [mutableShoppingList addObject:@"Yogurt"];
+    [mutableShoppingList removeObject:@"Bread"];
+    
+    NSLog(@"Original Shopping list =  %@",shoppingList);
+    NSLog(@"Mutable Shopping list =  %@",mutableShoppingList);
     
     return YES;
 }
