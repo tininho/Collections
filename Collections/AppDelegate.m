@@ -75,6 +75,12 @@
     NSLog(@"Original Shopping list =  %@",shoppingList);
     NSLog(@"Mutable Shopping list =  %@",mutableShoppingList);
     
+    /* Working with Immutable OrderedSet objects*/
+    
+    NSOrderedSet *orderedSetOfNumbers = [NSOrderedSet orderedSetWithArray:@[@3,@4,@1,@5,@10]];
+    
+    NSLog(@"Ordered set of Numbers = %@",orderedSetOfNumbers);
+    
     return YES;
 }
 							
