@@ -81,6 +81,16 @@
     
     NSLog(@"Ordered set of Numbers = %@",orderedSetOfNumbers);
     
+    /* Working with mutable OrderedSet objects*/
+    
+    NSMutableOrderedSet *mutableOrderedSetOfNumbers = [NSMutableOrderedSet orderedSetWithArray:@[@3,@4,@1,@5,@10]];
+    
+    [mutableOrderedSetOfNumbers removeObject:@5];
+    [mutableOrderedSetOfNumbers addObject:@0];
+    [mutableOrderedSetOfNumbers exchangeObjectAtIndex:1 withObjectAtIndex:2];
+    
+    NSLog(@"Mutable Ordered set of Numbers = %@",mutableOrderedSetOfNumbers);
+    
     return YES;
 }
 							
