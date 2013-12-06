@@ -103,7 +103,7 @@
     NSLog(@"Count for object @20 = %lu", (unsigned long)[countedSetOfNumbers countForObject:@20]);
     NSLog(@"Counted Set of Numbers = %@", countedSetOfNumbers);
     
-    /* Object Subscripting support */
+    /* OLD Dictionary Subscripting support */
     
     NSString *const kFirstNameKey = @"firstName";
     NSString *const kLastNameKey = @"lastName";
