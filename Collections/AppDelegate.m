@@ -91,6 +91,18 @@
     
     NSLog(@"Mutable Ordered set of Numbers = %@",mutableOrderedSetOfNumbers);
     
+    /* Working with CountedSet Object */
+    
+    NSCountedSet *countedSetOfNumbers = [NSCountedSet setWithObjects:@10,@20,@10,@10,@30,nil];
+    
+    [countedSetOfNumbers addObject:@20];
+    [countedSetOfNumbers removeObject:@10];
+    [countedSetOfNumbers addObject:@50];
+    
+    NSLog(@"Count for object @10 = %lu", (unsigned long)[countedSetOfNumbers countForObject:@10]);
+    NSLog(@"Count for object @20 = %lu", (unsigned long)[countedSetOfNumbers countForObject:@20]);
+    NSLog(@"Counted Set of Numbers = %@", countedSetOfNumbers);
+          
     return YES;
 }
 							
