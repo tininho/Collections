@@ -12,7 +12,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    /* immutable and mutable array */
+    NSArray *stringsArray = @[
+                              @"String 1",
+                              @"String 2",
+                              @"String 3"
+                              ];
+    
+    __unused NSString *firstString = stringsArray[0];
+    __unused NSString *secondString = stringsArray[1];
+    __unused NSString *thirdString = stringsArray[2];
+    
+    NSLog(@"Immutable array = %@", stringsArray);
+     
     return YES;
 }
 							
