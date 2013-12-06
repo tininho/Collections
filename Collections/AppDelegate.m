@@ -102,7 +102,24 @@
     NSLog(@"Count for object @10 = %lu", (unsigned long)[countedSetOfNumbers countForObject:@10]);
     NSLog(@"Count for object @20 = %lu", (unsigned long)[countedSetOfNumbers countForObject:@20]);
     NSLog(@"Counted Set of Numbers = %@", countedSetOfNumbers);
-          
+    
+    /* Object Subscripting support */
+    
+    NSString *const kFirstNameKey = @"firstName";
+    NSString *const kLastNameKey = @"lastName";
+    
+    NSMutableDictionary *subscriptingMutableDictionary = [[NSMutableDictionary alloc] init];
+    
+    [subscriptingMutableDictionary setValue:@"Toni" forKey:kFirstNameKey];
+    [subscriptingMutableDictionary setValue:@"Espinosa" forKey:kLastNameKey];
+    
+    __unused NSString *subscriptingFirstName = [subscriptingMutableDictionary valueForKey:kFirstNameKey];
+    __unused NSString *subscriptingLastName = [subscriptingMutableDictionary valueForKey:kLastNameKey];
+    
+    
+    
+    NSLog(@"Subscripting Full Name = %@ %@", subscriptingFirstName, subscriptingLastName);
+    
     return YES;
 }
 							
