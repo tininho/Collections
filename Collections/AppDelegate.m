@@ -54,6 +54,18 @@
     
     NSLog(@"New Person Information is %@",mutablePersonInformation);
     
+    /* Working with Immutable Set objects */
+    
+    NSSet *shoppingList = [[NSSet alloc] initWithObjects:
+                           @"Milk",
+                           @"Bananas",
+                           @"Bread",
+                           @"Milk",
+                           nil];
+    
+    NSLog(@"Shopping list =  %@",shoppingList);
+    
+    
     return YES;
 }
 							
