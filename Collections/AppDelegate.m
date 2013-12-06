@@ -113,12 +113,31 @@
     [subscriptingMutableDictionary setValue:@"Toni" forKey:kFirstNameKey];
     [subscriptingMutableDictionary setValue:@"Espinosa" forKey:kLastNameKey];
     
-    __unused NSString *subscriptingFirstName = [subscriptingMutableDictionary valueForKey:kFirstNameKey];
-    __unused NSString *subscriptingLastName = [subscriptingMutableDictionary valueForKey:kLastNameKey];
+    NSString *subscriptingFirstName = [subscriptingMutableDictionary valueForKey:kFirstNameKey];
+    NSString *subscriptingLastName = [subscriptingMutableDictionary valueForKey:kLastNameKey];
     
+    NSLog(@"Subscripting OLD Full Name = %@ %@", subscriptingFirstName, subscriptingLastName);
     
+    /* NEW Dictionary Subscripting support */
     
-    NSLog(@"Subscripting Full Name = %@ %@", subscriptingFirstName, subscriptingLastName);
+    NSDictionary *subscriptingDictionary = @{
+                                             kFirstNameKey : @"Ramón",
+                                             kLastNameKey : @"Haro",
+                                             };
+    
+    subscriptingFirstName = [subscriptingDictionary valueForKey:kFirstNameKey];
+    subscriptingLastName = [subscriptingDictionary valueForKey:kLastNameKey];
+    
+    NSLog(@"Subscripting NEW Full Name = %@ %@", subscriptingFirstName, subscriptingLastName);
+    
+    /* OLD Array Subcripting support */
+    
+    NSArray *oldSubscriptingArray = [[NSArray alloc] initWithObjects:@"Margarita", @"Haro", nil];
+    
+    NSString *firstItem = oldSubscriptingArray[0];
+    NSString *secondItem = oldSubscriptingArray[1];
+    
+    NSLog(@"Full content array = %@ %@", firstItem, secondItem);
     
     return YES;
 }
