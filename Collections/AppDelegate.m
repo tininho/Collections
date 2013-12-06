@@ -139,6 +139,15 @@
     
     NSLog(@"Full content array = %@ %@", firstItem, secondItem);
     
+    /* NEW Array Subcripting support */
+
+    NSArray *subscriptingArray = @[@"Florentino", @"Romero"];
+    
+    firstItem = subscriptingArray[0];
+    secondItem = subscriptingArray[1];
+    
+    NSLog(@"Full content array = %@ %@", firstItem, secondItem);
+    
     return YES;
 }
 							
